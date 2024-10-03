@@ -1,7 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import '../App.css'
 
 function MainQuiz() {
   const answers = ["Answer 1", "Answer 2", "Answer 3", "Answer 4"];
+  const navigate = useNavigate();
+
+  const handleEndQuiz = () => {
+    if (confirm('Are you sure you end this quiz?'))
+      navigate("/");
+  }
+
   return (
     <>
       <div className="card">
@@ -27,7 +35,7 @@ function MainQuiz() {
         <p>Timer: 2m left...</p>
       </div>
       <div className="card">
-        <button name="endQuiz">End Quiz</button>
+        <button name="endQuiz" onClick={handleEndQuiz}>End Quiz</button>
       </div>
     </>
   );

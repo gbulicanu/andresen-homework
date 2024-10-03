@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 function QuizResult() {
+    const navigate = useNavigate();
+
     return (
     <>
         <div className="card">
@@ -17,8 +20,8 @@ function QuizResult() {
             <p>Actual time to answer all questions: 3:23</p>
         </div>
         <div className="card">
-            <button>Restart</button>
-            <button>Chose another card</button>
+            <button onClick={() => navigate("/")}>Restart</button>
+            <button onClick={() => navigate("/main")}>Chose another quiz</button>
         </div>
     </>
     );

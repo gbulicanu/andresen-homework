@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import './App.css'
 
 function App() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="card">
@@ -18,8 +20,8 @@ function App() {
         </select>
       </div>
       <div className='card'>
-        <button>Start quiz</button>
-        <button>See my statistics</button>
+        <button onClick={() => navigate('/main')}>Start quiz</button>
+        <button onClick={() => navigate('/stats')}>See my statistics</button>
       </div>
     </>
   )
