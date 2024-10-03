@@ -1,3 +1,5 @@
+import '../App.css'
+
 function MainQuiz() {
   const answers = ["Answer 1", "Answer 2", "Answer 3", "Answer 4"];
   return (
